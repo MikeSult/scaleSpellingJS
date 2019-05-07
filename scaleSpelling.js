@@ -228,7 +228,7 @@ function noteNameToMIDI(noteName)  {
  * @example
  * var c_scale = ["C4","D4","E4","F4","G4","A4","B4","C5"];
  * var eb_scale = TransposeSequence(c_scale, 3);
- * // eb_scale = ["D#4","F4","G4","G#4","A#4","C5","D5","D$5"];
+ * // eb_scale = ["D#4","F4","G4","G#4","A#4","C5","D5","D#5"];
  * // wrong spelling but sounds correct.  
  * // This spelling is OK for (guitar/mandolin) tablature but can't be used for standard notation.
  */
