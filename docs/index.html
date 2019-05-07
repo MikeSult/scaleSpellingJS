@@ -1,0 +1,898 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#scalespellingjs'
+                  class="">
+                  scaleSpelling.js
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transposesequence'
+                  class="">
+                  TransposeSequence
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#extendscaletothreeoctaves'
+                  class="">
+                  extendScaleToThreeOctaves
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spellmode'
+                  class="">
+                  spellMode
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spelldiatonicchord'
+                  class="">
+                  spellDiatonicChord
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spellchord'
+                  class="">
+                  spellChord
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spellinterval'
+                  class="">
+                  spellInterval
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spellscale'
+                  class="">
+                  spellScale
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spellscale2'
+                  class="">
+                  spellScale2
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='scalespellingjs'>
+      scaleSpelling.js
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This module contains utility functions to create scale and chord structures useable with Tone.js</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>scaleSpelling.js</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>use the script tag to add <span class="hljs-keyword">this</span> file
+&lt;script src=<span class="hljs-string">"path/to/scaleSpelling.js"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transposesequence'>
+      TransposeSequence
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function transposes an arrayOfNotes by a specified number of half steps</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new TransposeSequence(arrayOfNotes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, transposeHalfSteps: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arrayOfNotes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>transposeHalfSteps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        array of transposed notes
+NOTE: doesn't deal with correct name but only the correct sounding pitch
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> c_scale = [<span class="hljs-string">"C4"</span>,<span class="hljs-string">"D4"</span>,<span class="hljs-string">"E4"</span>,<span class="hljs-string">"F4"</span>,<span class="hljs-string">"G4"</span>,<span class="hljs-string">"A4"</span>,<span class="hljs-string">"B4"</span>,<span class="hljs-string">"C5"</span>];
+<span class="hljs-keyword">var</span> eb_scale = TransposeSequence(c_scale, <span class="hljs-number">3</span>);
+<span class="hljs-comment">// eb_scale = ["D#4","F4","G4","G#4","A#4","C5","D5","D$5"];</span>
+<span class="hljs-comment">// wrong spelling but sounds correct.  </span>
+<span class="hljs-comment">// This spelling is OK for (guitar/mandolin) tablature but can't be used for standard notation.</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='extendscaletothreeoctaves'>
+      extendScaleToThreeOctaves
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function takes a scale and extends it to three octave (one octave lower and one octave higher)</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>extendScaleToThreeOctaves(scale: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scale</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    (array of strings)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> my_scale = [<span class="hljs-string">"A4"</span>,<span class="hljs-string">"B4"</span>,<span class="hljs-string">"C#5"</span>,<span class="hljs-string">"D5"</span>,<span class="hljs-string">"E5"</span>,<span class="hljs-string">"F#5"</span>,<span class="hljs-string">"G#5"</span>,<span class="hljs-string">"A5"</span>];
+<span class="hljs-keyword">var</span> new_scale = extendScaleToThreeOctaves(my_scale);
+<span class="hljs-comment">// new_scale = ["A3","B3","C#4","D4","E4","F#4","G#4",</span>
+<span class="hljs-comment">//               "A4","B4","C#5","D5","E5","F#5","G#5",</span>
+<span class="hljs-comment">//                "A5","B5","C#6","D6","E6","F#6","G#6","A6"]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spellmode'>
+      spellMode
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function returns an array of noteNames suitable for Tone.js use</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>spellMode(scaleFormulaInput: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>), rootAndOctave: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, modeNum: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scaleFormulaInput</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>))</code>
+	    (can be either a (comma separated) string or an array of integers)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rootAndOctave</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>modeNum</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        array of noteNames in mode
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> myFormula = <span class="hljs-string">"0,2,4,5,7,9,11"</span>;
+<span class="hljs-keyword">var</span> myMode = spellMode(myFormula, <span class="hljs-string">"Eb4"</span>,<span class="hljs-number">3</span>); <span class="hljs-comment">// third mode of G major</span>
+<span class="hljs-comment">// myMode = ['G4','Ab4',Bb4','C5','D5','Eb5','F5','G5'] (G phrygian)</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spelldiatonicchord'>
+      spellDiatonicChord
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function returns an array of noteNames in chord suitable for Tone.js use</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>spellDiatonicChord(scaleDegrees: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, scaleFormula: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, rootAndOctave: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scaleDegrees</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    (can be either a (comma separated) string or an array of strings)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scaleFormula</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rootAndOctave</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        array of noteNames in chord
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> scale_degrees = <span class="hljs-string">"2,4,6"</span>; <span class="hljs-comment">// or [2,4,6]</span>
+<span class="hljs-keyword">var</span> scale_formula = <span class="hljs-string">"0,2,4,5,7,9,11"</span> <span class="hljs-comment">// or [0,2,4,5,7,9,11]</span>
+<span class="hljs-keyword">var</span> myChord = spellDiatonicChord(scale_degrees, scale_formula, <span class="hljs-string">"A4"</span>)
+<span class="hljs-comment">// myChord = ["B4","D5","F#5"]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spellchord'>
+      spellChord
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function returns an array of noteNames suitable for Tone.js use</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>spellChord(chordFormulaInput: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>), rootAndOctave: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, scaleDegrees: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>chordFormulaInput</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>))</code>
+	    (can be either a (comma separated) string or an array of integers)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rootAndOctave</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scaleDegrees</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    (an array of integers)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        array of noteNames in chord
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> chord_formula = <span class="hljs-string">"0,4,7"</span>;
+<span class="hljs-keyword">var</span> root = <span class="hljs-string">"A4"</span>;
+<span class="hljs-keyword">var</span> scale_degrees = [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>];
+<span class="hljs-keyword">var</span> myChord = spellChord(chord_formula, root, scale_degrees);
+<span class="hljs-comment">// myChord = ["A4","C#5","E5"]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spellinterval'>
+      spellInterval
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function returns an array of noteNames suitable for Tone.js use</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>spellInterval(intervalFormulaInput: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, rootAndOctave: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>intervalFormulaInput</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    (array of integers)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rootAndOctave</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        array of interval noteNames
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> interval_formula = [<span class="hljs-number">0</span>,<span class="hljs-number">7</span>];
+<span class="hljs-keyword">var</span> myInterval = spellInterval(interval_formula, <span class="hljs-string">"Bb4"</span>)
+<span class="hljs-comment">// myInterval = ["Bb4","F5"]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spellscale'>
+      spellScale
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function returns an array of noteNames suitable for Tone.js use</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>spellScale(scaleFormulaInput: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>), rootAndOctave: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scaleFormulaInput</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>))</code>
+	    (can be either a (comma separated) string or an array of integers)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rootAndOctave</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        array of noteNames
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> myFormula = <span class="hljs-string">"0,2,4,5,7,9,11"</span>;
+<span class="hljs-keyword">var</span> myScale = spellScale(myFormula, <span class="hljs-string">"Ab4"</span>);
+<span class="hljs-comment">// myScale = ['Ab4',Bb4','C5','Db5','Eb5','F5','G5','Ab5']</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spellscale2'>
+      spellScale2
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>this function returns an array of noteNames suitable for Tone.js use</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>spellScale2(scaleFormulaInput: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>), rootAndOctave: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scaleFormulaInput</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>))</code>
+	    (can be either a (comma separated) string or an array of integers)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rootAndOctave</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        array of noteNames
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> myFormula = <span class="hljs-string">"0,2,4,5,7,9,11"</span>;
+<span class="hljs-keyword">var</span> myScale = spellScale(myFormula, <span class="hljs-string">"G4"</span>);
+<span class="hljs-comment">// myScale = ['G4','A4',B4','C5','D5','E5','F#5','G5']</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
